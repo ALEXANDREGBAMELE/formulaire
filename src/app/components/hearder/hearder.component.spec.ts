@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormulaireComponent } from './formulaire.component';
+import { HearderComponent } from './hearder.component';
 
-describe('FormulaireComponent', () => {
-  let component: FormulaireComponent;
-  let fixture: ComponentFixture<FormulaireComponent>;
+describe('HearderComponent', () => {
+  let component: HearderComponent;
+  let fixture: ComponentFixture<HearderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormulaireComponent]
+      imports: [HearderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FormulaireComponent);
+    fixture = TestBed.createComponent(HearderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('FormulaireComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-app.component.ts

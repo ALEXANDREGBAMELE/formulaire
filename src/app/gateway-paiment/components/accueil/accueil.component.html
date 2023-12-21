@@ -1,0 +1,71 @@
+<div class="container flex justify-content-center">
+    <div class="left mr-1">
+        <div class="left-top">
+            <div class="left-top-top p-5">
+                <div class="texte-head"><h3> <i class="pi pi-shopping-bag mr-3"></i>Selectionez votre moyen de paiement.</h3></div>
+                <div class="texte-content">Pour effectuer votre paiement en toute sécurité de maniere simple et rapide, selectionnez votre moyen de paiement.</div>
+            </div>
+
+            @if (!operator) {
+                <div class="left-top-bottom grid gap-6 p-5 justify-content-center">
+                    <div class="item" (click)="showOperator('ORANGE')"><img src="../../../../assets/img/logo-orange.png" alt="ORANGE"></div>
+                    <div class="item" (click)="showOperator('MTN')"><img src="../../../../assets/img/logo-momo.png" alt="MTN"></div>
+                    <div class="item" (click)="showOperator('MOOV')"><img src="../../../../assets/img/logo-moov.png" alt="MOOV"></div>
+                    <div class="item" (click)="showOperator('WAVE')"><img src="../../../../assets/img/logo-wave.png" alt="WAVE"></div>
+                    <div class="item" (click)="showOperator('VISA')"><img src="../../../../assets/img/logo-visa.png" alt="VISA"></div>    
+                    <div class="item" (click)="showOperator('MASTERCARD')"><img src="../../../../assets/img/logo-mastercard.png" alt="MASTERCARD"></div>
+                </div>
+
+              } 
+              @else {
+                <div class="left-top-bottom grid gap-6 p-5 justify-content-center">
+                    <app-gateway-operator-form [imageUrl]="getImagePath(operator)" [buttonEvent]="this.bottomData" [suivant]="suivant()" [isClicked]="isClicked"></app-gateway-operator-form>
+                </div>
+              }
+           
+        </div>
+        <div class="left-bottom flex justify-content-between">
+            @if (this.operator == "VISA" || this.operator == "MASTERCARD") {
+                <div class="send-buton text-center p-3" (click)="suivant()" >{{bottomData[2].name}}</div>
+
+            }
+            @else {
+                <div class="send-buton text-center p-3" (click)="goToTraiteurPage()" >{{bottomData[0].name}}</div>
+            }
+            <div class="cancel-buton text-center p-3" >{{bottomData[1].name}}</div>
+          
+            
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-top p-5">
+            <div class="libelle text-1xl"><i class="pi pi-shield mr-2 text-1xl"></i><span>Paiement à 100% sécurisé</span></div>
+            <div class="buton-amount mt-3 border-round">
+                <div class="amount flex justify-content-between p-3">
+                    <div class="amount-title">Montant total : </div>
+                    <div class="amount-value"><i class="pi pi-shopping-bag mr-3"></i> 150000 FCFA</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-bottom flex justify-content-center">
+            <div class="recapt">
+                <div class="item flex justify-content-between p-3">
+                    <div class="label">Nom du service : </div>
+                    <div class="value">FIF CAN</div>
+                </div>
+                <div class="item flex justify-content-between p-3">
+                    <div class="label">Montant : </div>
+                    <div class="value">150.000 </div>
+                </div>
+                <div class="item flex justify-content-between p-3">
+                    <div class="label">Frais : </div>
+                    <div class="value">15.000 </div>
+                </div>
+                <div class="item flex justify-content-between p-3">
+                    <div class="label">Devise : </div>
+                    <div class="value">FCFA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

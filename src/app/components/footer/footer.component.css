@@ -1,0 +1,17 @@
+
+footer {
+    background-color: #f8f9fa; 
+    text-align: center; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-bottom: 0; /* Réduisez la marge en bas pour économiser de l'espace sur les petits écrans */
+    }
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

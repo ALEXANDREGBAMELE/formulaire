@@ -1,0 +1,29 @@
+<div class="left-top-bottom grid gap-6 p-5 justify-content-center">
+   
+    <form action="" class="for-by-mobile">
+        <div class="logo">
+            <img src="{{imageUrl}}" alt="">
+        </div>
+        @if (!(this.imageUrl.includes('visa') || this.imageUrl.includes('mastercard'))) {
+    <div class="form-group-mini-1">
+        <input type="tel" id="tel" placeholder="Saisissez votre numero de téléphone" />
+    </div>}
+    @else if ((this.imageUrl.includes('visa') || this.imageUrl.includes('mastercard')) && !this.suivant) {
+        <div class="form-group-mini-2 grid gap-1">
+            <div><input type="tel" id="fiel-bank-card" placeholder="Nom" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Prénoms" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Email" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="No Téléphone" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Pays" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Adresse" /></div>
+        </div>
+       }
+    @else if((this.imageUrl.includes('visa') || this.imageUrl.includes('mastercard')) && this.suivant) {
+        <div class="form-group-mini-2 grid gap-1">
+            <div><input type="tel" id="fiel-bank-card" placeholder="ville" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Etat/Province" /></div>
+            <div><input type="tel" id="fiel-bank-card" placeholder="Code postal" /></div>
+        </div>
+    }
+   </form>  
+</div>

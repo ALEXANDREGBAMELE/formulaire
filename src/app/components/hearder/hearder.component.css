@@ -1,0 +1,30 @@
+nav{
+    background-color: #EBEBEB;
+}
+.langue{
+    position: relative;
+    left: 25%;
+}
+
+.langue .fr:hover,
+.langue .en:hover{
+   
+    background-color: #FAFAFA;
+    border: #171717 1px solid;
+}
+
+/* Styles responsive */
+@media screen and (max-width: 768px) {
+    .langue {
+        position: static; /* Annuler la position relative */
+        left: 0; /* Annuler le décalage à gauche */
+        text-align: center; /* Centrer le texte */
+    }
+    nav{
+        background-color: #EBEBEB;
+        width: 100%;
+    }
+    .mini-baniere{
+        width: 100%;
+    }
+}

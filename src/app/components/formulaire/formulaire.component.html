@@ -1,38 +1,36 @@
 
-<ng-container class="flex justify-content-center">
-  <p-card header=" Formulaire dinsciption ">
-      <ng-form>
 
-        <div class="card">
-          <div class="flex flex-wrap gap-3 mb-4">
-            <div class="flex-auto">
-              <label for="integer" class="font-bold block mb-2"> Integer </label>
-              <input pInputText id="integer" pKeyFilter="int" class="w-full" />
-            </div>
-            <div class="flex-auto">
-              <label for="number" class="font-bold block mb-2"> Number </label>
-              <input pInputText id="number" pKeyFilter="num" class="w-full" />
-            </div>
-            <div class="flex-auto">
-              <label for="money" class="font-bold block mb-2"> Money </label>
-              <input pInputText id="money" pKeyFilter="money" class="w-full" />
-            </div>
+
+<div class="container grid">    
+  <div class="left col">
+  </div>
+  <div class="right col">
+    
+    <form action=""> 
+      <div class="title text-center"><h1>INSCRIPTION</h1></div>
+      <div class="form flex gap-5">
+        <div class="form-group-mini">
+          <div class="flex-auto mb-4">
+            <label for="integer" class="font-bold block mb-2"> Nom </label>
+            <input type="text" id="integer"  [style]="{width:'350px', height:'40px', borderRadius:'5px'}" />
           </div>
-          <div class="flex flex-wrap gap-3">
-            <div class="flex-auto">
-              <label for="hex" class="font-bold block mb-2"> Hex </label>
-              <input pInputText id="hex" pKeyFilter="hex" class="w-full" />
-            </div>
-            <div class="flex-auto">
-              <label for="alphabetic" class="font-bold block mb-2"> Alphabetic </label>
-              <input pInputText id="alphabetic" pKeyFilter="alpha" class="w-full" />
-            </div>
-            <div class="flex-auto">
-              <label for="alphanumeric" class="font-bold block mb-2"> Alphanumeric </label>
-              <input pInputText id="alphanumeric" pKeyFilter="alphanum" class="w-full" />
-            </div>
+          <div class="flex-auto">
+            <label for="number" class="font-bold block mb-2"> email </label>
+            <input type="email" id="number" [style]="{width:'350px', height:'40px', borderRadius:'5px'}" />
           </div>
         </div>
-      </ng-form>
-  </p-card>
-</ng-container>
+        <div class="form-group-mini">
+          <div class="flex-auto mb-4">
+            <label for="integer" class="font-bold block mb-2"> password </label>
+            <p-password [(ngModel)]="value"  [style]="{width:'350px', height:'40px', borderRadius:'5px'}"></p-password>
+            <input type="password" id="integer"  [style]="{width:'350px', height:'40px', borderRadius:'5px'}" />
+          </div>
+          <div class="flex-auto">
+            <label for="number" class="font-bold block mb-2"> confirm password </label>
+            <input type="password" id="number"  [style]="{width:'350px', height:'40px', borderRadius:'5px'}" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

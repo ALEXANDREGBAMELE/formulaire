@@ -1,0 +1,15 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 60px;
+    background-color: #f8f9fa; /* Ajoutez une couleur de fond si nécessaire */
+    text-align: center; /* Centrez le contenu */
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        position: relative; /* Changez la position à relative pour revenir au flux normal sur les petits écrans */
+        line-height: normal; /* Réinitialisez la hauteur de ligne à la valeur normale */
+    }
+}

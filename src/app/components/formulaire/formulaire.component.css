@@ -1,0 +1,28 @@
+.right{
+    height: 90vh !important;
+    display: flex;
+    
+}
+.integer{
+    width: 100% !important;
+    height: 50px !important;
+    background-color: aqua !important;
+}
+
+.left{
+    background-image: url("https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.p-card{
+    background-color: blue  ;
+}
+
+form{
+    margin: auto;
+    
+}
+.right{
+    background: linear-gradient(to right, #00ff80, #8999e4);
+}       

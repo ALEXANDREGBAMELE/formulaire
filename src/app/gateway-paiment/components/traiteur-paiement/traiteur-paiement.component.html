@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="left">
+        <div class="logo">
+            <img src="../../../../assets/img/logo-mastercard.png" alt="" height="217">
+        </div>
+    </div>
+    <div class="right">
+       @if (isAnimationActive) {
+        <div class="container-sm en-courde-traitement">
+            <div class="spiner">
+                <img [src]="'../../../../assets/img/spiner.png'" [class.spinner]="isAnimationActive" alt="" height="200">
+            </div>
+            <div class="text-container text-center">
+                <p>Votre transaction est en cours de traitement. Veuillez patienter… <br> Vous recevrez un message de confirmation de paiement. <br>Par mail</p>
+            </div>
+            
+            <button (click)="toggleAnimation()">Toggle Animation</button>
+
+        </div>
+       }
+        @else { 
+            <div class="container-sm traitement-avec-succes">
+                <div class="text-container text-center">
+                    <div class="succes-color">Paiement accepté</div>
+                    <p>Votre paiement à été effectué avec succès. Veuillez retourner À la page d’accueil pour effectuer un autre paiement.</p>
+                </div>
+                <div class="succes">
+                    <img [src]="'../../../../assets/img/success-35-512.png'" alt="" height="200">
+                </div>
+                <div class="button mt-5 mb-5 p-5" (click)="goToAccueilPage()">
+                    Retour
+                </div>
+                
+                <button (click)="toggleAnimation()">Toggle Animation</button>
+    
+            </div>
+        }
+    </div>
+</div>
